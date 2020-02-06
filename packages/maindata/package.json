@@ -1,0 +1,35 @@
+{
+  "private": true,
+  "name": "@anno-1800-wiki/maindata",
+  "version": "0.0.0",
+  "main": "./dist/cjs/index.js",
+  "module": "./dist/esm/index.d.ts",
+  "files": [
+    "./dist",
+    "./src"
+  ],
+  "scripts": {
+    "build": "yarn build:cjs && yarn build:esm",
+    "build:cjs": "tsc -p ./tsconfig.cjs.json",
+    "build:esm": "tsc -p ./tsconfig.esm.json",
+    "clean:dist": "rimraf ./dist",
+    "prepare": "yarn clean:dist && yarn build",
+    "test": "jest",
+    "ts": "ts-node -r tsconfig-paths/register -P ../../tsconfig.scripts.json"
+  },
+  "sideEffects": false,
+  "jest": {
+    "collectCoverage": true,
+    "coverageThreshold": {
+      "global": {
+        "statements": 100,
+        "branches": 100,
+        "functions": 100,
+        "lines": 100
+      }
+    },
+    "transform": {
+      "^.+\\.tsx?$": "ts-jest"
+    }
+  }
+}
