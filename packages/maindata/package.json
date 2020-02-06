@@ -2,11 +2,11 @@
   "private": true,
   "name": "@anno-1800-wiki/maindata",
   "version": "0.0.0",
-  "main": "./dist/cjs/index.js",
-  "module": "./dist/esm/index.d.ts",
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.d.ts",
   "files": [
-    "./dist",
-    "./src"
+    "dist",
+    "src"
   ],
   "scripts": {
     "build": "yarn build:cjs && yarn build:esm",
