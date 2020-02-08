@@ -1,0 +1,6 @@
+guid: 101254
+desc: 0
+icon: !<tag:yaml.org,2002:js/undefined> ''
+name: residence_colony01_tier01
+id: !<tag:yaml.org,2002:js/undefined> ''
+template: ResidenceBuilding7

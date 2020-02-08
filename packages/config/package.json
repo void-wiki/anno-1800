@@ -1,6 +1,6 @@
 {
   "private": true,
-  "name": "@anno-1800-wiki/maindata",
+  "name": "@anno-1800-wiki/config",
   "version": "0.0.0",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.d.ts",
@@ -13,6 +13,7 @@
     "build:cjs": "tsc -p ./tsconfig.cjs.json",
     "build:esm": "tsc -p ./tsconfig.esm.json",
     "clean:dist": "rimraf ./dist",
+    "gen:config": "yarn ts scripts/gen-config",
     "prepare": "yarn clean:dist && yarn build",
     "test": "jest",
     "ts": "ts-node -r tsconfig-paths/register -P ../../tsconfig.scripts.json"
