@@ -24,6 +24,9 @@ export async function genAssets(): Promise<void> {
   // helpers.findProperties(assets, 'Standard');
 
   const outputDir = resolve(srcDir, 'assets');
+  const countMap: Record<string, number> = Object.fromEntries(
+    TEMPLATE_NAMES_FOR_EXPORT.map(t => [t, 0]),
+  );
   await fs.remove(outputDir);
   await Promise.all(
     assets
@@ -35,9 +38,9 @@ export async function genAssets(): Promise<void> {
       .map(a => createAsset(a))
       .map(async asset => {
         const { guid, template = '_' } = asset;
-        const content = yaml.dump(asset);
-        const path = resolve(outputDir, template, `${guid}.yaml`);
-        await fs.outputFile(path, content, 'utf-8');
+        countMap[template] += 1;
+        await fs.outputFile(resolve(outputDir, template, `${guid}.yaml`), yaml.dump(asset));
       }),
   );
+  await fs.outputFile(resolve(outputDir, 'manifest.yaml'), yaml.dump(countMap));
 }

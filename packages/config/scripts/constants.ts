@@ -1,9 +1,15 @@
 import { resolve } from 'path';
 import { dataConvertedDir } from '../../../scripts/helpers';
 
+// current package related
+
 export const pkgDir = resolve(__dirname, '..');
 
 export const srcDir = resolve(pkgDir, 'src');
+
+export const srcAssetsDir = resolve(srcDir, 'assets');
+
+// raw files related
 
 export const assetDir = resolve(dataConvertedDir, 'config/export/main/asset');
 
