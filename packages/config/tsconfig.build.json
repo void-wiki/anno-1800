@@ -3,6 +3,15 @@
   "compilerOptions": {
     "target": "ES6"
   },
-  "include": ["./src"],
-  "exclude": ["node_modules", "**/*.spec.ts", "**/*.spec.tsx", "**/*.test.ts", "**/*.test.tsx"]
+  "include": ["src/**/*"],
+  "exclude": [
+    "node_modules",
+    "build",
+    "scripts",
+    "__tests__",
+    "**/*.spec.ts",
+    "**/*.spec.tsx",
+    "**/*.test.ts",
+    "**/*.test.tsx"
+  ]
 }
