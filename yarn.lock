@@ -1634,10 +1634,10 @@
   resolved "https://registry.yarnpkg.com/@void-aurora/commitlint-config/-/commitlint-config-0.6.1.tgz#208445d95cae50053535564f958155b4276a683b"
   integrity sha512-xDwaG6Dmy4vdglFQqAZIyQ5HtkrZycwW+D76Pm7d4pf0P26waZp0pn+SmpbeSA/Pp2hKyEEWE9VU4l0nCEyu4g==
 
-"@void-aurora/eslint-config@^0.6.2":
-  version "0.6.2"
-  resolved "https://registry.yarnpkg.com/@void-aurora/eslint-config/-/eslint-config-0.6.2.tgz#dfbb6f79c041fdcdcca955bde0646f3a4ef11ae0"
-  integrity sha512-L0vkVg5vat5N+iBEN7LpCeqH7ClPOTl+JHdkb3ao/xMbCyRVzIRrpEmDMYb/1TlL8/qLJTiMtDDW5MXZ3FduAw==
+"@void-aurora/eslint-config@^0.6.4":
+  version "0.6.4"
+  resolved "https://registry.yarnpkg.com/@void-aurora/eslint-config/-/eslint-config-0.6.4.tgz#3386ce98f5e8eafd47fa8da30b447e3a65952834"
+  integrity sha512-TYfVQUPi/Q6aaSscIKFF9qToWe9yy00gGPmrkZmHS5td91LQRSxju896Mq0Aj2xCE1q3cvdBh9MFqLItvqE2BQ==
 
 "@void-aurora/prettier-config@^0.5.1":
   version "0.5.1"
@@ -1649,10 +1649,10 @@
   resolved "https://registry.yarnpkg.com/@void-aurora/stylelint-config/-/stylelint-config-0.6.1.tgz#fcd32ceb641f1176dcf445e8a6c30fbf5662d029"
   integrity sha512-eAoLZS2iGCILdrnUucTvqWW293GzuX9dGGsurpJUtXeqRn8hkTkcFEfR71P4ZHRqjuq7EI1iyZS6iRGPdSKW3w==
 
-"@void-aurora/toolkit@^0.8.1":
-  version "0.8.1"
-  resolved "https://registry.yarnpkg.com/@void-aurora/toolkit/-/toolkit-0.8.1.tgz#40a3208a4a1fc9c08b23919dbcbfbb6e6c55b995"
-  integrity sha512-QGyStXPcfNWGYppszwGQtemQIyVMaopmEM1k3px7DAV+/vIw6ze0a27TOofTKzfGbvMUfNMhWB0lwpGUOU114g==
+"@void-aurora/toolkit@^0.8.3":
+  version "0.8.3"
+  resolved "https://registry.yarnpkg.com/@void-aurora/toolkit/-/toolkit-0.8.3.tgz#d98aba1dd68d23b95092b54e178e12d8d4e4ad60"
+  integrity sha512-fCaBAfaW55sp1+48Oxug4wEGeVpEiI9KYb7ArV8s1+vjDmkpDRQP2vlW2pI10Ck0ruDtXXervwEONKtF8ibnHg==
   dependencies:
     "@commitlint/cli" "^8.3.5"
     "@commitlint/config-lerna-scopes" "^8.3.4"
@@ -1663,7 +1663,7 @@
     "@typescript-eslint/eslint-plugin" "^2.19.0"
     "@typescript-eslint/parser" "^2.19.0"
     "@void-aurora/commitlint-config" "^0.6.1"
-    "@void-aurora/eslint-config" "^0.6.2"
+    "@void-aurora/eslint-config" "^0.6.4"
     "@void-aurora/prettier-config" "^0.5.1"
     "@void-aurora/stylelint-config" "^0.6.1"
     chalk "^3.0.0"
