@@ -9,14 +9,14 @@ export function createAsset(assetXml: VElement): Asset {
     .find(c => c.name === TAG_NAMES.Values)
     ?.children.find(c => c.name === 'Standard')?.children as VElement[];
   const guid = Number.parseInt(props.find(c => c.name === 'GUID')?.value ?? '0', 10);
-  const desc = Number.parseInt(props.find(c => c.name === 'InfoDescription')?.value ?? '0', 10);
+  const desc = props.find(c => c.name === 'InfoDescription')?.value;
   const icon = props.find(c => c.name === 'IconFilename')?.value;
   const name = props.find(c => c.name === 'Name')?.value;
   const id = props.find(c => c.name === 'ID')?.value;
 
   return {
     guid,
-    desc,
+    desc: typeof desc !== 'undefined' && desc !== '' ? Number.parseInt(desc, 10) : undefined,
     icon,
 
     name,

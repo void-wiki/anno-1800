@@ -1,3 +1,6 @@
 export * from './models';
 
-export const helloWorld = 'Hello World!';
+/**
+ * Specified template names for export.
+ */
+export const TEMPLATE_EXPORTED = ['ResidenceBuilding7', 'ResidenceBuilding7_Arctic'] as const;

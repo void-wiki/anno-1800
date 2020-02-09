@@ -9,6 +9,10 @@ export const srcDir = resolve(pkgDir, 'src');
 
 export const srcAssetsDir = resolve(srcDir, 'assets');
 
+export const distDir = resolve(pkgDir, 'dist');
+
+export const filenameManifest = 'manifest.yaml';
+
 // raw files related
 
 export const assetDir = resolve(dataConvertedDir, 'config/export/main/asset');
@@ -54,11 +58,3 @@ export const TAG_NAMES = {
   DefaultContainerValues: 'DefaultContainerValues',
 } as const;
 /* eslint-enable @typescript-eslint/naming-convention */
-
-/**
- * Specified template names for export.
- */
-export const TEMPLATE_NAMES_FOR_EXPORT: readonly string[] = [
-  'ResidenceBuilding7',
-  'ResidenceBuilding7_Arctic',
-];
