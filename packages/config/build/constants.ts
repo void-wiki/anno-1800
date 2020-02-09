@@ -39,6 +39,7 @@ export const TAG_NAMES = {
   BaseAssetGUID: 'BaseAssetGUID',
   Item: 'Item',
   Objective: 'Objective',
+
   VectorElement: 'VectorElement',
   InheritedIndex: 'InheritedIndex',
   InheritanceMapV2: 'InheritanceMapV2',

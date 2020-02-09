@@ -2,7 +2,7 @@ import { resolve } from 'path';
 import fs from 'fs-extra';
 import yaml from 'js-yaml';
 import { TEMPLATE_EXPORTED, Asset } from '../src';
-import { VElement } from '../scripts/v-element';
+import { VElement } from './v-element';
 import {
   srcAssetsDir,
   filenameManifest,
@@ -10,21 +10,16 @@ import {
   propertiesFile,
   templatesFile,
   TAG_NAMES,
-} from '../scripts/constants';
-import * as helpers from '../scripts/helpers';
+} from './constants';
+import { process } from './process';
 import { createAsset } from './model/asset';
 
 export async function genAssets(): Promise<Asset[]> {
-  const assetsXml: VElement[] = (
-    await Promise.all(assetsFiles.map(async f => fs.readJSON(f)))
-  ).flat();
-  const [defaultValuesXml, defaultContainerValuesXml] = helpers.processProperties(
+  const assetsXml: VElement[] = process(
+    (await Promise.all(assetsFiles.map(async f => fs.readJSON(f)))).flat(1),
     await fs.readJSON(propertiesFile),
+    await fs.readJSON(templatesFile),
   );
-  const templatesXml: VElement[] = (await fs.readJSON(templatesFile)) as VElement[];
-
-  helpers.processInheritance(assetsXml, templatesXml, defaultValuesXml, defaultContainerValuesXml);
-  // helpers.findProperties(assets, 'Standard');
 
   const countMap: Record<string, number> = Object.fromEntries(TEMPLATE_EXPORTED.map(t => [t, 0]));
   await fs.remove(srcAssetsDir);

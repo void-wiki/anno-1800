@@ -1,5 +1,5 @@
 import { Building } from '../../src';
-import { VElement, pickValue } from '../../scripts/v-element';
+import { VElement, pickValue } from '../v-element';
 import { PropertyCreateFunction } from './_base';
 
 export const elementName = 'Building';

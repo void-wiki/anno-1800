@@ -4,7 +4,7 @@ import fs from 'fs-extra';
 import globby from 'globby';
 import yaml from 'js-yaml';
 import { Asset, TEMPLATE_EXPORTED } from '../src';
-import { srcAssetsDir, distDir, filenameManifest } from '../scripts/constants';
+import { srcAssetsDir, distDir, filenameManifest } from './constants';
 
 export async function buildAssets(): Promise<void> {
   const manifest: Record<string, number> = await fs

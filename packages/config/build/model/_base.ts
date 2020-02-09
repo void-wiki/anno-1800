@@ -1,5 +1,5 @@
 import { Asset } from '../../src';
-import { VElement } from '../../scripts/v-element';
+import { VElement } from '../v-element';
 
 export type Property = Exclude<keyof Asset, 'guid' | 'desc' | 'icon' | 'name' | 'id' | 'template'>;
 

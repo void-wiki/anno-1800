@@ -1,6 +1,6 @@
 import { Asset } from '../../src';
-import { VElement, pickValue } from '../../scripts/v-element';
-import { TAG_NAMES } from '../../scripts/constants';
+import { VElement, pickValue } from '../v-element';
+import { TAG_NAMES } from '../constants';
 import { PropertyCreatorMap } from './_base';
 
 import * as building from './building';
