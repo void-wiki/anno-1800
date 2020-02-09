@@ -2,7 +2,7 @@ import { resolve } from 'path';
 import fs from 'fs-extra';
 import yaml from 'js-yaml';
 import { TEMPLATE_EXPORTED, Asset } from '../src';
-import { VElement } from './v-element';
+import { VElement } from '../scripts/v-element';
 import {
   srcAssetsDir,
   filenameManifest,
@@ -10,8 +10,8 @@ import {
   propertiesFile,
   templatesFile,
   TAG_NAMES,
-} from './constants';
-import * as helpers from './helpers';
+} from '../scripts/constants';
+import * as helpers from '../scripts/helpers';
 import { createAsset } from './model/asset';
 
 export async function genAssets(): Promise<Asset[]> {

@@ -4,3 +4,14 @@ icon: !<tag:yaml.org,2002:js/undefined> ''
 name: residence_colony01_tier02
 id: !<tag:yaml.org,2002:js/undefined> ''
 template: ResidenceBuilding7
+building:
+  type: !<tag:yaml.org,2002:js/undefined> ''
+  category: !<tag:yaml.org,2002:js/undefined> ''
+  terrain: !<tag:yaml.org,2002:js/undefined> ''
+  regions:
+    - Colony01
+  pickingAsset: 101254
+cost:
+  costs: !<tag:yaml.org,2002:js/undefined> ''
+  influenceCostType: !<tag:yaml.org,2002:js/undefined> ''
+  influenceCostPoints: !<tag:yaml.org,2002:js/undefined> ''

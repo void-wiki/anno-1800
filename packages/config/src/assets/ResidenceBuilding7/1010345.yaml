@@ -4,3 +4,17 @@ icon: data/ui/2kimages/main/3dicons/icon_resident.png
 name: residence_tier03
 id: !<tag:yaml.org,2002:js/undefined> ''
 template: ResidenceBuilding7
+building:
+  type: Residence
+  category: !<tag:yaml.org,2002:js/undefined> ''
+  terrain: !<tag:yaml.org,2002:js/undefined> ''
+  regions:
+    - Moderate
+  pickingAsset: 1010343
+cost:
+  costs:
+    '1010196': 8
+    '1010205': 5
+    '1010218': 4
+  influenceCostType: !<tag:yaml.org,2002:js/undefined> ''
+  influenceCostPoints: !<tag:yaml.org,2002:js/undefined> ''

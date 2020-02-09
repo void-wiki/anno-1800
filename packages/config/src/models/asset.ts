@@ -1,3 +1,6 @@
+import { Building } from './building';
+import { Cost } from './const';
+
 /**
  * Anno 1800 Base Asset Type.
  *
@@ -29,4 +32,7 @@ export interface Asset {
   name?: string;
   id?: string;
   template?: string;
+
+  building?: Building;
+  cost?: Cost;
 }
