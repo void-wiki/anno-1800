@@ -1,17 +1,18 @@
 guid: 101255
-desc: !<tag:yaml.org,2002:js/undefined> ''
-icon: !<tag:yaml.org,2002:js/undefined> ''
+desc: 163059
+icon: data/ui/2kimages/main/3dicons/icon_resident.png
 name: residence_colony01_tier02
 id: !<tag:yaml.org,2002:js/undefined> ''
 template: ResidenceBuilding7
 building:
-  type: !<tag:yaml.org,2002:js/undefined> ''
-  category: !<tag:yaml.org,2002:js/undefined> ''
-  terrain: !<tag:yaml.org,2002:js/undefined> ''
+  type: Residence
+  category: 100004
+  terrain: Terrain
   regions:
     - Colony01
   pickingAsset: 101254
 cost:
-  costs: !<tag:yaml.org,2002:js/undefined> ''
+  costs:
+    '1010196': 2
   influenceCostType: !<tag:yaml.org,2002:js/undefined> ''
   influenceCostPoints: !<tag:yaml.org,2002:js/undefined> ''

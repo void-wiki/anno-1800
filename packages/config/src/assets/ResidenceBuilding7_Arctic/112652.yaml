@@ -6,9 +6,10 @@ id: !<tag:yaml.org,2002:js/undefined> ''
 template: ResidenceBuilding7_Arctic
 building:
   type: Residence
-  category: !<tag:yaml.org,2002:js/undefined> ''
-  terrain: !<tag:yaml.org,2002:js/undefined> ''
-  regions: !<tag:yaml.org,2002:js/undefined> ''
+  category: 100004
+  terrain: Terrain
+  regions:
+    - Arctic
   pickingAsset: 112091
 cost:
   costs:
