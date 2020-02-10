@@ -1,0 +1,48 @@
+guid: 15000000
+desc: 0
+icon: data/ui/2kimages/main/3dicons/resident/icon_resident_farmer.png
+name: Moderate Population 1
+id: !<tag:yaml.org,2002:js/undefined> ''
+template: PopulationLevel7
+populationLevel7:
+  populationInputs:
+    - product: 120020
+      amount: !<tag:yaml.org,2002:js/undefined> ''
+      supplyWeight: 5
+      moneyValue: !<tag:yaml.org,2002:js/undefined> ''
+      fullWeightPopulationCount: !<tag:yaml.org,2002:js/undefined> ''
+      noWeightPopulationCount: !<tag:yaml.org,2002:js/undefined> ''
+    - product: 1010200
+      amount: 0.0004166667
+      supplyWeight: 3
+      moneyValue: 10
+      fullWeightPopulationCount: 100
+      noWeightPopulationCount: 49
+    - product: 1010216
+      amount: 0.000555556
+      supplyWeight: !<tag:yaml.org,2002:js/undefined> ''
+      moneyValue: 30
+      fullWeightPopulationCount: 150
+      noWeightPopulationCount: 99
+    - product: 1010237
+      amount: 0.000512821
+      supplyWeight: 2
+      moneyValue: 30
+      fullWeightPopulationCount: 150
+      noWeightPopulationCount: 99
+    - product: 1010349
+      amount: !<tag:yaml.org,2002:js/undefined> ''
+      supplyWeight: !<tag:yaml.org,2002:js/undefined> ''
+      moneyValue: 12
+      fullWeightPopulationCount: 150
+      noWeightPopulationCount: 149
+  populationOutputs:
+    - product: 1010052
+      amount: 100
+  categoryIcon: data/ui/2kimages/main/icons/icon_arrow.png
+  moodText:
+    Angry: 19748
+    Unhappy: 19749
+    Neutral: 19750
+    Happy: 19751
+    Euphoric: 19752

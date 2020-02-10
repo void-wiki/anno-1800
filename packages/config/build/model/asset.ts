@@ -5,32 +5,32 @@ import { PropertyCreatorMap } from './_base';
 
 import * as building from './building';
 import * as cost from './cost';
+import * as upgradable from './upgradable';
+
+import * as residence7 from './residence-7';
+import * as populationLevel7 from './population-level-7';
 
 const propertiesCreatorMap: PropertyCreatorMap = {
   building,
   cost,
+  upgradable,
+  residence7,
+  populationLevel7,
 };
 
 export function createAsset(assetXml: VElement): Asset {
-  const template = assetXml.children.find(c => c.name === TAG_NAMES.Template)?.value;
-
   const elemStandard = assetXml.children
     .find(c => c.name === TAG_NAMES.Values)
     ?.children.find(c => c.name === 'Standard') as VElement;
-  const guid = pickValue(elemStandard, 'GUID', 'number', 0);
-  const desc = pickValue(elemStandard, 'InfoDescription', 'number');
-  const icon = pickValue(elemStandard, 'IconFilename', 'string');
-  const name = pickValue(elemStandard, 'Name', 'string');
-  const id = pickValue(elemStandard, 'ID', 'string');
 
   const asset: Asset = {
-    guid,
-    desc,
-    icon,
+    guid: pickValue(elemStandard, 'GUID', 'number', 0),
+    desc: pickValue(elemStandard, 'InfoDescription', 'number'),
+    icon: pickValue(elemStandard, 'IconFilename', 'string'),
 
-    name,
-    id,
-    template,
+    name: pickValue(elemStandard, 'Name', 'string'),
+    id: pickValue(elemStandard, 'ID', 'string'),
+    template: pickValue(assetXml, TAG_NAMES.Template, 'string'),
   };
 
   Object.entries(propertiesCreatorMap).forEach(([prop, creator]) => {

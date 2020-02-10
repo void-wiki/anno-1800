@@ -1,0 +1,54 @@
+guid: 112642
+desc: 0
+icon: data/ui/2kimages/main/3dicons/resident/icon_resident_colony03_tier01.png
+name: Arctic Population 1
+id: !<tag:yaml.org,2002:js/undefined> ''
+template: PopulationLevel7
+populationLevel7:
+  populationInputs:
+    - product: 114890
+      amount: !<tag:yaml.org,2002:js/undefined> ''
+      supplyWeight: 4
+      moneyValue: 20
+      fullWeightPopulationCount: !<tag:yaml.org,2002:js/undefined> ''
+      noWeightPopulationCount: !<tag:yaml.org,2002:js/undefined> ''
+    - product: 112705
+      amount: 0.0002
+      supplyWeight: 3
+      moneyValue: 40
+      fullWeightPopulationCount: 250
+      noWeightPopulationCount: 99
+    - product: 112702
+      amount: 0.0001
+      supplyWeight: 3
+      moneyValue: 70
+      fullWeightPopulationCount: 500
+      noWeightPopulationCount: 499
+    - product: 112708
+      amount: !<tag:yaml.org,2002:js/undefined> ''
+      supplyWeight: !<tag:yaml.org,2002:js/undefined> ''
+      moneyValue: !<tag:yaml.org,2002:js/undefined> ''
+      fullWeightPopulationCount: !<tag:yaml.org,2002:js/undefined> ''
+      noWeightPopulationCount: !<tag:yaml.org,2002:js/undefined> ''
+    - product: 112701
+      amount: 0.00015
+      supplyWeight: !<tag:yaml.org,2002:js/undefined> ''
+      moneyValue: 50
+      fullWeightPopulationCount: 500
+      noWeightPopulationCount: 249
+    - product: 1010216
+      amount: 0.00025
+      supplyWeight: !<tag:yaml.org,2002:js/undefined> ''
+      moneyValue: 35
+      fullWeightPopulationCount: 500
+      noWeightPopulationCount: 499
+  populationOutputs:
+    - product: 112653
+      amount: 100
+  categoryIcon: data/ui/2kimages/main/icons/icon_arrow.png
+  moodText:
+    Angry: 116347
+    Unhappy: 116347
+    Neutral: 116014
+    Happy: 112801
+    Euphoric: 116015

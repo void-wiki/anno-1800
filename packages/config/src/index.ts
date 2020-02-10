@@ -1,10 +1,10 @@
 export * from './models';
 
 /**
- * Specified template names for export.
+ * Templates those have been exported
  */
 export const TEMPLATE_EXPORTED = [
   'ResidenceBuilding7',
   'ResidenceBuilding7_Arctic',
-  // 'Warehouse',
+  'PopulationLevel7',
 ] as const;

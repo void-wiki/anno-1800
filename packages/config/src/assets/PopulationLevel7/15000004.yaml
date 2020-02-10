@@ -1,0 +1,102 @@
+guid: 15000004
+desc: 0
+icon: data/ui/2kimages/main/3dicons/resident/icon_resident_investor.png
+name: Moderate Population 5
+id: !<tag:yaml.org,2002:js/undefined> ''
+template: PopulationLevel7
+populationLevel7:
+  populationInputs:
+    - product: 120030
+      amount: 0.000296296
+      supplyWeight: 16
+      moneyValue: 100
+      fullWeightPopulationCount: !<tag:yaml.org,2002:js/undefined> ''
+      noWeightPopulationCount: !<tag:yaml.org,2002:js/undefined> ''
+    - product: 1010245
+      amount: 0.000833333
+      supplyWeight: !<tag:yaml.org,2002:js/undefined> ''
+      moneyValue: 140
+      fullWeightPopulationCount: !<tag:yaml.org,2002:js/undefined> ''
+      noWeightPopulationCount: !<tag:yaml.org,2002:js/undefined> ''
+    - product: 120032
+      amount: 0.001568627
+      supplyWeight: 8
+      moneyValue: 80
+      fullWeightPopulationCount: !<tag:yaml.org,2002:js/undefined> ''
+      noWeightPopulationCount: !<tag:yaml.org,2002:js/undefined> ''
+    - product: 1010246
+      amount: 0.000261438
+      supplyWeight: !<tag:yaml.org,2002:js/undefined> ''
+      moneyValue: 180
+      fullWeightPopulationCount: !<tag:yaml.org,2002:js/undefined> ''
+      noWeightPopulationCount: !<tag:yaml.org,2002:js/undefined> ''
+    - product: 1010354
+      amount: !<tag:yaml.org,2002:js/undefined> ''
+      supplyWeight: 8
+      moneyValue: !<tag:yaml.org,2002:js/undefined> ''
+      fullWeightPopulationCount: !<tag:yaml.org,2002:js/undefined> ''
+      noWeightPopulationCount: !<tag:yaml.org,2002:js/undefined> ''
+    - product: 1010208
+      amount: 0.000416667
+      supplyWeight: 8
+      moneyValue: 140
+      fullWeightPopulationCount: !<tag:yaml.org,2002:js/undefined> ''
+      noWeightPopulationCount: !<tag:yaml.org,2002:js/undefined> ''
+    - product: 1010356
+      amount: !<tag:yaml.org,2002:js/undefined> ''
+      supplyWeight: !<tag:yaml.org,2002:js/undefined> ''
+      moneyValue: 200
+      fullWeightPopulationCount: !<tag:yaml.org,2002:js/undefined> ''
+      noWeightPopulationCount: !<tag:yaml.org,2002:js/undefined> ''
+    - product: 120016
+      amount: 0.000392
+      supplyWeight: 2
+      moneyValue: 50
+      fullWeightPopulationCount: 750
+      noWeightPopulationCount: !<tag:yaml.org,2002:js/undefined> ''
+    - product: 1010259
+      amount: 0.00037037
+      supplyWeight: 2
+      moneyValue: 50
+      fullWeightPopulationCount: 1750
+      noWeightPopulationCount: 749
+    - product: 1010355
+      amount: !<tag:yaml.org,2002:js/undefined> ''
+      supplyWeight: !<tag:yaml.org,2002:js/undefined> ''
+      moneyValue: 50
+      fullWeightPopulationCount: 1750
+      noWeightPopulationCount: 749
+    - product: 1010258
+      amount: 0.000888889
+      supplyWeight: 2
+      moneyValue: 50
+      fullWeightPopulationCount: 3000
+      noWeightPopulationCount: 1749
+    - product: 1010250
+      amount: 0.000350877
+      supplyWeight: !<tag:yaml.org,2002:js/undefined> ''
+      moneyValue: 250
+      fullWeightPopulationCount: 3000
+      noWeightPopulationCount: 1749
+    - product: 1010248
+      amount: 0.0000877
+      supplyWeight: !<tag:yaml.org,2002:js/undefined> ''
+      moneyValue: 150
+      fullWeightPopulationCount: 5000
+      noWeightPopulationCount: 2999
+    - product: 1010225
+      amount: 0.000111111
+      supplyWeight: 4
+      moneyValue: 300
+      fullWeightPopulationCount: 5000
+      noWeightPopulationCount: 4999
+  populationOutputs:
+    - product: 1010128
+      amount: 100
+  categoryIcon: data/ui/2kimages/main/icons/icon_arrow.png
+  moodText:
+    Angry: 19778
+    Unhappy: 19779
+    Neutral: 19780
+    Happy: 19781
+    Euphoric: 19782

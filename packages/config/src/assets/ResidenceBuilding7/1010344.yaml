@@ -14,5 +14,15 @@ building:
 cost:
   costs:
     '1010196': 4
-  influenceCostType: !<tag:yaml.org,2002:js/undefined> ''
-  influenceCostPoints: !<tag:yaml.org,2002:js/undefined> ''
+  influenceCostType: None
+  influenceCostPoints: 1
+upgradable:
+  next: 1010345
+  costs:
+    '1010196': 6
+    '1010205': 2
+    '1010218': 2
+residence7:
+  populationLevel7: 15000001
+  start: 1
+  max: 20

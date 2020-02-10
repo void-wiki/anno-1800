@@ -17,5 +17,17 @@ cost:
     '1010205': 10
     '1010207': 8
     '1010218': 8
-  influenceCostType: !<tag:yaml.org,2002:js/undefined> ''
-  influenceCostPoints: !<tag:yaml.org,2002:js/undefined> ''
+  influenceCostType: None
+  influenceCostPoints: 1
+upgradable:
+  next: 1010347
+  costs:
+    '1010196': 10
+    '1010202': 3
+    '1010205': 4
+    '1010207': 3
+    '1010218': 3
+residence7:
+  populationLevel7: 15000003
+  start: 1
+  max: 40

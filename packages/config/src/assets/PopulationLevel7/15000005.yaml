@@ -1,0 +1,48 @@
+guid: 15000005
+desc: 0
+icon: data/ui/2kimages/main/3dicons/resident/icon_resident_jornalero.png
+name: Colony01 Population 1
+id: !<tag:yaml.org,2002:js/undefined> ''
+template: PopulationLevel7
+populationLevel7:
+  populationInputs:
+    - product: 120020
+      amount: !<tag:yaml.org,2002:js/undefined> ''
+      supplyWeight: 5
+      moneyValue: !<tag:yaml.org,2002:js/undefined> ''
+      fullWeightPopulationCount: !<tag:yaml.org,2002:js/undefined> ''
+      noWeightPopulationCount: !<tag:yaml.org,2002:js/undefined> ''
+    - product: 120033
+      amount: 0.00047619
+      supplyWeight: 3
+      moneyValue: 25
+      fullWeightPopulationCount: 100
+      noWeightPopulationCount: 49
+    - product: 1010257
+      amount: 0.000238095
+      supplyWeight: !<tag:yaml.org,2002:js/undefined> ''
+      moneyValue: 25
+      fullWeightPopulationCount: 200
+      noWeightPopulationCount: 99
+    - product: 120043
+      amount: 0.000416667
+      supplyWeight: 2
+      moneyValue: 25
+      fullWeightPopulationCount: 300
+      noWeightPopulationCount: 199
+    - product: 120050
+      amount: !<tag:yaml.org,2002:js/undefined> ''
+      supplyWeight: !<tag:yaml.org,2002:js/undefined> ''
+      moneyValue: !<tag:yaml.org,2002:js/undefined> ''
+      fullWeightPopulationCount: 300
+      noWeightPopulationCount: 299
+  populationOutputs:
+    - product: 1010366
+      amount: 100
+  categoryIcon: !<tag:yaml.org,2002:js/undefined> ''
+  moodText:
+    Angry: 19783
+    Unhappy: 19784
+    Neutral: 19785
+    Happy: 19786
+    Euphoric: 19787
