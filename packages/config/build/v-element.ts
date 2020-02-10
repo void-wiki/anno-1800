@@ -49,7 +49,7 @@ export function pickValue<K extends keyof PickTypeMap>(
     case 'boolean':
       return (rawValue.toLowerCase() === 'true') as PickTypeMap[K];
     case 'boolean[]':
-      return rawValue.split(';').map(i => rawValue.toLowerCase() === 'true') as PickTypeMap[K];
+      return rawValue.split(';').map(i => i.toLowerCase() === 'true') as PickTypeMap[K];
 
     case 'string':
       return rawValue as PickTypeMap[K];
