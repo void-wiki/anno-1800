@@ -12,9 +12,9 @@ export function process(
   const [defaultValues, defaultContainerValue] = processProperties(propertiesDoc);
   const templates = processTemplates(templatesDoc);
 
-  inheritProperties(templates, defaultValues, defaultContainerValue);
   inheritTemplates(assets, templates);
   inheritAssets(assets);
+  inheritProperties(assets, defaultValues, defaultContainerValue);
 
   return assets;
 }
