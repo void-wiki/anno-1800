@@ -32,6 +32,10 @@ export interface PickTypeMap {
 
   float: number;
   'float[]': number[];
+
+  // hex color
+  hex: string;
+  'hex[]': string[];
 }
 
 function convertToBoolean(text: string | undefined): boolean {
@@ -49,6 +53,38 @@ function convertToBoolean(text: string | undefined): boolean {
     default:
       return false;
   }
+}
+
+function convertToNumber(text: string | undefined): number | undefined {
+  if (text === undefined || text === '') {
+    return undefined;
+  }
+  return +text;
+}
+
+function convertToInt(text: string | undefined): number | undefined {
+  if (text === undefined || text === '') {
+    return undefined;
+  }
+  return Number.parseInt(text, 10);
+}
+
+function convertToFloat(text: string | undefined): number | undefined {
+  if (text === undefined || text === '') {
+    return undefined;
+  }
+  return Number.parseFloat(text);
+}
+
+/**
+ * Convert a decimal number text to hex color (format: `aarrggbb`)
+ */
+function convertToHex(text: string | undefined): string | undefined {
+  if (text === undefined || text === '') {
+    return undefined;
+  }
+  // eslint-disable-next-line no-bitwise
+  return (Number.parseInt(text, 10) >>> 0).toString(16);
 }
 
 export function pickValue<K extends keyof PickTypeMap>(
@@ -70,35 +106,40 @@ export function pickValue<K extends keyof PickTypeMap>(
   type: K,
   defaultValue?: PickTypeMap[K],
 ): PickTypeMap[K] | undefined {
-  const rawValue = elem.children.find(c => c.name === childName)?.value;
-  if (rawValue === undefined || rawValue === '') {
+  const text = elem.children.find(c => c.name === childName)?.value;
+  if (text === undefined || text === '') {
     return defaultValue;
   }
   switch (type) {
     case 'boolean':
-      return convertToBoolean(rawValue) as PickTypeMap[K];
+      return convertToBoolean(text) as PickTypeMap[K];
     case 'boolean[]':
-      return rawValue.split(';').map(i => convertToBoolean(i)) as PickTypeMap[K];
+      return text.split(';').map(i => convertToBoolean(i)) as PickTypeMap[K];
 
     case 'string':
-      return rawValue as PickTypeMap[K];
+      return text as PickTypeMap[K];
     case 'string[]':
-      return rawValue.split(';') as PickTypeMap[K];
+      return text.split(';') as PickTypeMap[K];
 
     case 'number':
-      return +rawValue as PickTypeMap[K];
+      return convertToNumber(text) as PickTypeMap[K];
     case 'number[]':
-      return rawValue.split(';').map(i => +i) as PickTypeMap[K];
+      return text.split(';').map(i => convertToNumber(i)) as PickTypeMap[K];
 
     case 'int':
-      return Number.parseInt(rawValue, 10) as PickTypeMap[K];
+      return convertToInt(text) as PickTypeMap[K];
     case 'int[]':
-      return rawValue.split(';').map(i => Number.parseInt(i, 10)) as PickTypeMap[K];
+      return text.split(';').map(i => convertToInt(i)) as PickTypeMap[K];
 
     case 'float':
-      return Number.parseFloat(rawValue) as PickTypeMap[K];
+      return convertToFloat(text) as PickTypeMap[K];
     case 'float[]':
-      return rawValue.split(';').map(i => Number.parseFloat(i)) as PickTypeMap[K];
+      return text.split(';').map(i => convertToFloat(i)) as PickTypeMap[K];
+
+    case 'hex':
+      return convertToHex(text) as PickTypeMap[K];
+    case 'hex[]':
+      return text.split(';').map(i => convertToHex(i)) as PickTypeMap[K];
 
     default:
       return undefined;
