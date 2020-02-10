@@ -5,6 +5,18 @@ export interface VElement {
   value: string;
 }
 
+export function pick<T>(
+  elem: VElement,
+  childName: string,
+  valuePicker: (childElem: VElement) => T,
+): T | undefined {
+  const child = elem.children.find(c => c.name === childName);
+  if (child) {
+    return valuePicker(child);
+  }
+  return undefined;
+}
+
 export interface PickTypeMap {
   boolean: boolean;
   'boolean[]': boolean[];
@@ -22,16 +34,21 @@ export interface PickTypeMap {
   'float[]': number[];
 }
 
-export function pick<T>(
-  elem: VElement,
-  childName: string,
-  valuePicker: (childElem: VElement) => T,
-): T | undefined {
-  const child = elem.children.find(c => c.name === childName);
-  if (child) {
-    return valuePicker(child);
+function convertToBoolean(text: string | undefined): boolean {
+  if (text === undefined) {
+    return false;
   }
-  return undefined;
+  switch (text.toLowerCase()) {
+    case 'true':
+    case '1':
+      return true;
+
+    case 'false':
+    case '0':
+    case '':
+    default:
+      return false;
+  }
 }
 
 export function pickValue<K extends keyof PickTypeMap>(
@@ -59,9 +76,9 @@ export function pickValue<K extends keyof PickTypeMap>(
   }
   switch (type) {
     case 'boolean':
-      return (rawValue.toLowerCase() === 'true') as PickTypeMap[K];
+      return convertToBoolean(rawValue) as PickTypeMap[K];
     case 'boolean[]':
-      return rawValue.split(';').map(i => i.toLowerCase() === 'true') as PickTypeMap[K];
+      return rawValue.split(';').map(i => convertToBoolean(i)) as PickTypeMap[K];
 
     case 'string':
       return rawValue as PickTypeMap[K];
