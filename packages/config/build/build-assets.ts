@@ -1,4 +1,3 @@
-/* eslint-disable no-await-in-loop */
 import { resolve } from 'path';
 import fs from 'fs-extra';
 import globby from 'globby';

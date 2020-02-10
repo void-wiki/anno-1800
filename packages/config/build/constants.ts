@@ -7,6 +7,8 @@ export const pkgDir = resolve(__dirname, '..');
 
 export const srcDir = resolve(pkgDir, 'src');
 
+export const srcI18nDir = resolve(srcDir, 'i18n');
+
 export const srcAssetsDir = resolve(srcDir, 'assets');
 
 export const distDir = resolve(pkgDir, 'dist');
@@ -14,6 +16,8 @@ export const distDir = resolve(pkgDir, 'dist');
 export const filenameManifest = 'manifest.yaml';
 
 // raw files related
+
+export const guiDir = resolve(dataConvertedDir, 'config/gui');
 
 export const assetDir = resolve(dataConvertedDir, 'config/export/main/asset');
 

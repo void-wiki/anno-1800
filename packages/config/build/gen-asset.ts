@@ -1,7 +1,7 @@
 import { resolve } from 'path';
 import fs from 'fs-extra';
 import yaml from 'js-yaml';
-import { TEMPLATE_EXPORTED, Asset } from '../src';
+import { Asset, TEMPLATE_EXPORTED } from '../src';
 import { VElement } from './v-element';
 import {
   srcAssetsDir,
@@ -21,8 +21,8 @@ export async function genAssets(): Promise<Asset[]> {
     await fs.readJSON(templatesFile),
   );
 
-  const countMap: Record<string, number> = Object.fromEntries(TEMPLATE_EXPORTED.map(t => [t, 0]));
   await fs.remove(srcAssetsDir);
+  const countMap: Record<string, number> = Object.fromEntries(TEMPLATE_EXPORTED.map(t => [t, 0]));
   const assets = await Promise.all(
     assetsXml
       .filter(a =>
