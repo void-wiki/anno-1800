@@ -4,7 +4,7 @@ import { inheritAssets } from './inheritAssets';
 import { inheritProperties } from './inheritProperties';
 import { inheritTemplates } from './inheritTemplates';
 
-export function process(
+export function processAssetsXml(
   assets: VElement[],
   propertiesDoc: VElement,
   templatesDoc: VElement,

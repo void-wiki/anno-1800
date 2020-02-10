@@ -3,6 +3,8 @@ import fs from 'fs-extra';
 import yaml from 'js-yaml';
 import { Asset, ManifestAssets, TEMPLATE_EXPORTED } from '../src';
 import { VElement } from './v-element';
+import { processAssetsXml } from './process';
+import { createAsset } from './model/asset';
 import {
   srcAssetsDir,
   manifestAssetsFile,
@@ -11,11 +13,9 @@ import {
   templatesFile,
   TAG_NAMES,
 } from './constants';
-import { process } from './process';
-import { createAsset } from './model/asset';
 
 export async function genAssets(): Promise<Asset[]> {
-  const assetsXml: VElement[] = process(
+  const assetsXml: VElement[] = processAssetsXml(
     (await Promise.all(assetsFiles.map(async f => fs.readJSON(f)))).flat(1),
     await fs.readJSON(propertiesFile),
     await fs.readJSON(templatesFile),

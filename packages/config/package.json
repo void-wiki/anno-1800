@@ -16,6 +16,7 @@
     "clean:dist": "rimraf ./dist",
     "gen:config": "yarn ts build/gen-config",
     "prepare": "yarn clean:dist && yarn build",
+    "scan:props": "yarn ts build/scan-properties.ts",
     "test": "jest",
     "ts": "ts-node -r tsconfig-paths/register -P ../../tsconfig.scripts.json"
   },
