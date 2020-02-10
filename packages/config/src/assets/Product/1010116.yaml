@@ -1,0 +1,19 @@
+guid: 1010116
+desc: 0
+icon: data/ui/2kimages/main/icons/icon_resource_merchants_2.png
+name: moderate workforce 3
+id: !<tag:yaml.org,2002:js/undefined> ''
+template: Product
+product:
+  category: 0
+  regions: !<tag:yaml.org,2002:js/undefined> ''
+  civLevel: !<tag:yaml.org,2002:js/undefined> ''
+  storageLevel: Area
+  color: !<tag:yaml.org,2002:js/undefined> ''
+  basePrice: !<tag:yaml.org,2002:js/undefined> ''
+  pathLayer: Street
+  deltaOnly: true
+  isWorkforce: true
+  isStrategicResource: !<tag:yaml.org,2002:js/undefined> ''
+  isAbstract: !<tag:yaml.org,2002:js/undefined> ''
+  canBeNegative: !<tag:yaml.org,2002:js/undefined> ''

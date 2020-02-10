@@ -10,12 +10,15 @@ import * as upgradable from './upgradable';
 import * as residence7 from './residence-7';
 import * as populationLevel7 from './population-level-7';
 
+import * as product from './product';
+
 const propertiesCreatorMap: PropertyCreatorMap = {
   building,
   cost,
   upgradable,
   residence7,
   populationLevel7,
+  product,
 };
 
 export function createAsset(assetXml: VElement): Asset {

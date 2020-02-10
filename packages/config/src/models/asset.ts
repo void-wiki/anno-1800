@@ -1,8 +1,11 @@
 import { Building } from './building';
 import { Cost } from './const';
 import { Upgradable } from './upgradable';
+
 import { Residence7 } from './residence-7';
 import { PopulationLevel7 } from './population-level-7';
+
+import { Product } from './product';
 
 /**
  * Anno 1800 Base Asset Type.
@@ -42,4 +45,6 @@ export interface Asset {
 
   residence7?: Residence7;
   populationLevel7?: PopulationLevel7;
+
+  product?: Product;
 }

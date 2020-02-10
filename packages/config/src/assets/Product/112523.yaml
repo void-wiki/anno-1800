@@ -1,0 +1,22 @@
+guid: 112523
+desc: 112522
+icon: data/ui/2kimages/main/3dicons/icon_junk_superior.png
+name: scrap III
+id: Scrap3
+template: Product
+product:
+  category: 11702
+  regions:
+    - Moderate
+    - Colony01
+    - Arctic
+  civLevel: 1
+  storageLevel: Building
+  color: !<tag:yaml.org,2002:js/undefined> ''
+  basePrice: 1265
+  pathLayer: Street
+  deltaOnly: !<tag:yaml.org,2002:js/undefined> ''
+  isWorkforce: !<tag:yaml.org,2002:js/undefined> ''
+  isStrategicResource: !<tag:yaml.org,2002:js/undefined> ''
+  isAbstract: !<tag:yaml.org,2002:js/undefined> ''
+  canBeNegative: !<tag:yaml.org,2002:js/undefined> ''

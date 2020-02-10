@@ -1,9 +1,11 @@
-guidAmount: 18
+guidAmount: 144
 templatesExported:
   - ResidenceBuilding7
   - ResidenceBuilding7_Arctic
   - PopulationLevel7
+  - Product
 guidAmountEachTemplate:
   ResidenceBuilding7: 7
   ResidenceBuilding7_Arctic: 2
   PopulationLevel7: 9
+  Product: 126

@@ -1,0 +1,21 @@
+guid: 1010193
+desc: 11728
+icon: data/ui/2kimages/main/3dicons/icon_meat_raw.png
+name: beef
+id: !<tag:yaml.org,2002:js/undefined> ''
+template: Product
+product:
+  category: 11702
+  regions:
+    - Moderate
+    - Colony01
+  civLevel: 3
+  storageLevel: Building
+  color: !<tag:yaml.org,2002:js/undefined> ''
+  basePrice: 100
+  pathLayer: Street
+  deltaOnly: !<tag:yaml.org,2002:js/undefined> ''
+  isWorkforce: !<tag:yaml.org,2002:js/undefined> ''
+  isStrategicResource: !<tag:yaml.org,2002:js/undefined> ''
+  isAbstract: !<tag:yaml.org,2002:js/undefined> ''
+  canBeNegative: !<tag:yaml.org,2002:js/undefined> ''

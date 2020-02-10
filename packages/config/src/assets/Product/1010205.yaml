@@ -1,0 +1,21 @@
+guid: 1010205
+desc: 11743
+icon: data/ui/2kimages/main/3dicons/icon_bricks.png
+name: bricks
+id: ProductBricks
+template: Product
+product:
+  category: 11707
+  regions:
+    - Moderate
+    - Colony01
+  civLevel: 2
+  storageLevel: Building
+  color: !<tag:yaml.org,2002:js/undefined> ''
+  basePrice: 25
+  pathLayer: Street
+  deltaOnly: !<tag:yaml.org,2002:js/undefined> ''
+  isWorkforce: !<tag:yaml.org,2002:js/undefined> ''
+  isStrategicResource: !<tag:yaml.org,2002:js/undefined> ''
+  isAbstract: !<tag:yaml.org,2002:js/undefined> ''
+  canBeNegative: !<tag:yaml.org,2002:js/undefined> ''

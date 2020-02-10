@@ -1,0 +1,19 @@
+guid: 1010190
+desc: 0
+icon: data/ui/2kimages/main/icons/icon_influence.png
+name: Influence
+id: ProductInfluence
+template: Product
+product:
+  category: 0
+  regions: !<tag:yaml.org,2002:js/undefined> ''
+  civLevel: !<tag:yaml.org,2002:js/undefined> ''
+  storageLevel: Meta
+  color: !<tag:yaml.org,2002:js/undefined> ''
+  basePrice: !<tag:yaml.org,2002:js/undefined> ''
+  pathLayer: Street
+  deltaOnly: !<tag:yaml.org,2002:js/undefined> ''
+  isWorkforce: !<tag:yaml.org,2002:js/undefined> ''
+  isStrategicResource: !<tag:yaml.org,2002:js/undefined> ''
+  isAbstract: !<tag:yaml.org,2002:js/undefined> ''
+  canBeNegative: true
