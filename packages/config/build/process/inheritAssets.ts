@@ -1,5 +1,5 @@
 /* eslint-disable no-param-reassign */
-import yaml from 'js-yaml';
+// import yaml from 'js-yaml';
 import { VElement, pickValue } from '../v-element';
 import { TAG_NAMES } from '../constants';
 import { inheritElement } from './inheritElement';

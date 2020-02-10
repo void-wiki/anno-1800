@@ -1,4 +1,4 @@
-import { VElement, pickValue } from '../v-element';
+import { VElement } from '../v-element';
 import { TAG_NAMES } from '../constants';
 import { inheritElement } from './inheritElement';
 
