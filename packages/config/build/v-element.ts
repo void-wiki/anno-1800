@@ -22,6 +22,18 @@ export interface PickTypeMap {
   'float[]': number[];
 }
 
+export function pick<T>(
+  elem: VElement,
+  childName: string,
+  valuePicker: (childElem: VElement) => T,
+): T | undefined {
+  const child = elem.children.find(c => c.name === childName);
+  if (child) {
+    return valuePicker(child);
+  }
+  return undefined;
+}
+
 export function pickValue<K extends keyof PickTypeMap>(
   elem: VElement,
   childName: string,
