@@ -1,11 +1,11 @@
 import { resolve } from 'path';
 import fs from 'fs-extra';
 import yaml from 'js-yaml';
-import { Asset, TEMPLATE_EXPORTED } from '../src';
+import { Asset, ManifestAssets, TEMPLATE_EXPORTED } from '../src';
 import { VElement } from './v-element';
 import {
   srcAssetsDir,
-  filenameManifest,
+  manifestAssetsFile,
   assetsFiles,
   propertiesFile,
   templatesFile,
@@ -21,8 +21,16 @@ export async function genAssets(): Promise<Asset[]> {
     await fs.readJSON(templatesFile),
   );
 
+  // remove old files
   await fs.remove(srcAssetsDir);
-  const countMap: Record<string, number> = Object.fromEntries(TEMPLATE_EXPORTED.map(t => [t, 0]));
+
+  const manifest: ManifestAssets = {
+    guidAmount: 0,
+    templatesExported: [...TEMPLATE_EXPORTED],
+    guidAmountEachTemplate: Object.fromEntries(TEMPLATE_EXPORTED.map(t => [t, 0])),
+  };
+
+  // output new files
   const assets = await Promise.all(
     assetsXml
       .filter(a =>
@@ -33,12 +41,15 @@ export async function genAssets(): Promise<Asset[]> {
       .map(a => createAsset(a))
       .map(async asset => {
         const { guid, template = '_' } = asset;
-        countMap[template] += 1;
+        manifest.guidAmount += 1;
+        manifest.guidAmountEachTemplate[template] += 1;
         await fs.outputFile(resolve(srcAssetsDir, template, `${guid}.yaml`), yaml.dump(asset));
         return asset;
       }),
   );
-  await fs.outputFile(resolve(srcAssetsDir, filenameManifest), yaml.dump(countMap));
+
+  // output manifest
+  await fs.outputFile(manifestAssetsFile, yaml.dump(manifest));
 
   return assets;
 }

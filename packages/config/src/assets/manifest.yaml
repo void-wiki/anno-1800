@@ -1,3 +1,9 @@
-ResidenceBuilding7: 7
-ResidenceBuilding7_Arctic: 2
-PopulationLevel7: 9
+guidAmount: 18
+templatesExported:
+  - ResidenceBuilding7
+  - ResidenceBuilding7_Arctic
+  - PopulationLevel7
+guidAmountEachTemplate:
+  ResidenceBuilding7: 7
+  ResidenceBuilding7_Arctic: 2
+  PopulationLevel7: 9

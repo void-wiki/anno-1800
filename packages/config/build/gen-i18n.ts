@@ -1,8 +1,8 @@
 import { resolve } from 'path';
 import fs from 'fs-extra';
 import yaml from 'js-yaml';
-import { Asset, LANGUAGES_EXPORTED } from '../src';
-import { srcI18nDir, filenameManifest, guiDir } from './constants';
+import { Asset, ManifestI18n, LANGUAGES_EXPORTED } from '../src';
+import { srcI18nDir, manifestI18nFile, guiDir } from './constants';
 
 export async function genI18n(assets: Asset[]): Promise<void> {
   const guidSet = new Set<number>();
@@ -18,7 +18,15 @@ export async function genI18n(assets: Asset[]): Promise<void> {
     resolve(guiDir, `texts_english.json`),
   );
 
+  // remove old files
   await fs.remove(srcI18nDir);
+
+  const mainfest: ManifestI18n = {
+    guidAmount: guidList.length,
+    languagesExported: [...LANGUAGES_EXPORTED],
+  };
+
+  // output new files
   await Promise.all(
     LANGUAGES_EXPORTED.map(async lang => {
       const rawDict: Record<number, string> = await fs.readJSON(
@@ -33,11 +41,7 @@ export async function genI18n(assets: Asset[]): Promise<void> {
       await fs.outputFile(resolve(srcI18nDir, `${lang}.yaml`), yaml.dump(dict));
     }),
   );
-  await fs.outputFile(
-    resolve(srcI18nDir, filenameManifest),
-    yaml.dump({
-      languagesExported: LANGUAGES_EXPORTED,
-      guidAmount: guidList.length,
-    }),
-  );
+
+  // output manifest
+  await fs.outputFile(manifestI18nFile, yaml.dump(mainfest));
 }

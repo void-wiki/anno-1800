@@ -1,4 +1,5 @@
 export * from './models';
+export * from './manifest';
 
 /**
  * Languages those have been exported

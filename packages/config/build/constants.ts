@@ -7,17 +7,17 @@ export const pkgDir = resolve(__dirname, '..');
 
 export const srcDir = resolve(pkgDir, 'src');
 
-export const srcI18nDir = resolve(srcDir, 'i18n');
+export const filenameManifest = 'manifest.yaml';
 
 export const srcAssetsDir = resolve(srcDir, 'assets');
+export const manifestAssetsFile = resolve(srcAssetsDir, filenameManifest);
+
+export const srcI18nDir = resolve(srcDir, 'i18n');
+export const manifestI18nFile = resolve(srcI18nDir, filenameManifest);
 
 export const distDir = resolve(pkgDir, 'dist');
 
-export const filenameManifest = 'manifest.yaml';
-
 // raw files related
-
-export const guiDir = resolve(dataConvertedDir, 'config/gui');
 
 export const assetDir = resolve(dataConvertedDir, 'config/export/main/asset');
 
@@ -30,6 +30,8 @@ export const propertiesFile = resolve(assetDir, 'properties.json');
 export const templatesGroupsFile = resolve(assetDir, 'templates-groups.json');
 
 export const templatesFile = resolve(assetDir, 'templates.json');
+
+export const guiDir = resolve(dataConvertedDir, 'config/gui');
 
 /* eslint-disable @typescript-eslint/naming-convention */
 /**
