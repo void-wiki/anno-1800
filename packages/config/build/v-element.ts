@@ -75,3 +75,46 @@ export function pickValue<K extends keyof PickTypeMap>(
       return undefined;
   }
 }
+
+export function pickMap<K extends keyof PickTypeMap>(
+  elem: VElement,
+  mapName: string,
+  valuePicker: (itemElem: VElement) => PickTypeMap[K] | undefined,
+): Record<string, PickTypeMap[K]> | undefined {
+  const entries = elem.children
+    .find(c => c.name === mapName)
+    ?.children.map<[string, PickTypeMap[K] | undefined]>(item => [item.name, valuePicker(item)])
+    .filter((kvp): kvp is [string, PickTypeMap[K]] => kvp[1] !== undefined);
+  if (entries && entries.length > 0) {
+    return Object.fromEntries(entries);
+  }
+  return undefined;
+}
+
+export function pickListToMap<
+  TKey extends Extract<keyof PickTypeMap, 'string' | 'int'>,
+  TValue extends keyof PickTypeMap
+>(
+  elem: VElement,
+  listName: string,
+  keyPicker: (itemElem: VElement) => PickTypeMap[TKey] | undefined,
+  valuePicker: (itemElem: VElement) => PickTypeMap[TValue] | undefined,
+): Record<PickTypeMap[TKey], PickTypeMap[TValue]> | undefined {
+  const entries = elem.children
+    .find(c => c.name === listName)
+    ?.children.map<[PickTypeMap[TKey] | undefined, PickTypeMap[TValue] | undefined]>(item => [
+      keyPicker(item),
+      valuePicker(item),
+    ])
+    .filter<[PickTypeMap[TKey], PickTypeMap[TValue]]>(
+      (kvp): kvp is [PickTypeMap[TKey], PickTypeMap[TValue]] =>
+        kvp[0] !== undefined && kvp[1] !== undefined,
+    );
+
+  if (entries && entries.length > 0) {
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    return Object.fromEntries(entries) as any;
+  }
+
+  return undefined;
+}
