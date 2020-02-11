@@ -1,7 +1,7 @@
 import { resolve } from 'path';
 import fs from 'fs-extra';
 import yaml from 'js-yaml';
-import { Asset, ManifestAssets, TEMPLATE_EXPORTED } from '../src';
+import { Asset, ManifestAssets, TEMPLATES_EXPORTED } from '../src';
 import { VElement } from './v-element';
 import { processAssetsXml } from './process';
 import { createAsset } from './model/asset';
@@ -26,15 +26,15 @@ export async function genAssets(): Promise<Asset[]> {
 
   const manifest: ManifestAssets = {
     guidAmount: 0,
-    templatesExported: [...TEMPLATE_EXPORTED],
-    guidAmountEachTemplate: Object.fromEntries(TEMPLATE_EXPORTED.map(t => [t, 0])),
+    templatesExported: [...TEMPLATES_EXPORTED],
+    guidAmountEachTemplate: Object.fromEntries(TEMPLATES_EXPORTED.map(t => [t, 0])),
   };
 
   // output new files
   const assets = await Promise.all(
     assetsXml
       .filter(a =>
-        (TEMPLATE_EXPORTED as readonly string[]).includes(
+        (TEMPLATES_EXPORTED as readonly string[]).includes(
           a.children.find(c => c.name === TAG_NAMES.Template)?.value as string,
         ),
       )

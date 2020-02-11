@@ -20,7 +20,7 @@ export const LANGUAGES_EXPORTED = [
 /**
  * Templates those have been exported
  */
-export const TEMPLATE_EXPORTED = [
+export const TEMPLATES_EXPORTED = [
   'ResidenceBuilding7',
   'ResidenceBuilding7_Arctic',
   'PopulationLevel7',

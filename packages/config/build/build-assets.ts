@@ -2,7 +2,7 @@ import { resolve } from 'path';
 import fs from 'fs-extra';
 import globby from 'globby';
 import yaml from 'js-yaml';
-import { Asset, ManifestAssets, TEMPLATE_EXPORTED } from '../src';
+import { Asset, ManifestAssets, TEMPLATES_EXPORTED } from '../src';
 import { filenameManifest, srcAssetsDir, manifestAssetsFile, distDir } from './constants';
 
 export async function buildAssets(): Promise<void> {
@@ -28,7 +28,7 @@ export async function buildAssets(): Promise<void> {
   }
 
   const assetsMap: Record<string, Asset[]> = Object.fromEntries(
-    TEMPLATE_EXPORTED.map(t => [t, []]),
+    TEMPLATES_EXPORTED.map(t => [t, []]),
   );
   assetsList.forEach(({ template, name, ...asset }) => {
     assetsMap[template as string].push(asset);
