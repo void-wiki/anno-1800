@@ -18,6 +18,7 @@ export async function buildAssets(): Promise<void> {
       files.map(async f => fs.readFile(resolve(srcAssetsDir, f), 'utf-8').then(c => yaml.load(c))),
     ),
   );
+  assetsList.sort((a, b) => a.guid - b.guid);
 
   // validate
   if (assetsList.length !== manifest.guidAmount) {
