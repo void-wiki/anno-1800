@@ -14,7 +14,7 @@
     "build:config": "yarn ts build/build-config.ts",
     "build:esm": "tsc -p ./tsconfig.esm.json",
     "clean:dist": "rimraf ./dist",
-    "gen:config": "yarn ts build/gen-config",
+    "gen:config": "yarn ts build/gen-config && prettier --loglevel warn --config ../../.prettierrc.js --write ./src/**/*.yaml",
     "prepare": "yarn clean:dist && yarn build",
     "scan:props": "yarn ts build/scan-properties.ts",
     "test": "jest",
