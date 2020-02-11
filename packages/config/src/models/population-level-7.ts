@@ -2,24 +2,24 @@ export interface PopulationInput {
   /**
    * Production GUID
    */
-  product?: number;
+  readonly product?: number;
 
-  amount?: number; // float
-  supplyWeight?: number;
-  moneyValue?: number;
-  fullWeightPopulationCount?: number;
-  noWeightPopulationCount?: number;
+  readonly amount?: number; // float
+  readonly supplyWeight?: number;
+  readonly moneyValue?: number;
+  readonly fullWeightPopulationCount?: number;
+  readonly noWeightPopulationCount?: number;
 }
 
 export interface PopulationOutput {
-  product?: number;
-  amount?: number;
+  readonly product?: number;
+  readonly amount?: number;
 }
 
 export interface PopulationLevel7 {
-  populationInputs?: PopulationInput[];
-  populationOutputs?: PopulationOutput[];
+  readonly populationInputs?: PopulationInput[];
+  readonly populationOutputs?: PopulationOutput[];
 
-  categoryIcon?: string;
-  moodText?: Record<string, number>;
+  readonly categoryIcon?: string;
+  readonly moodText?: Record<string, number>;
 }

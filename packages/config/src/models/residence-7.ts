@@ -2,15 +2,15 @@ export interface Residence7 {
   /**
    * PopulationLevel7 GUID
    */
-  populationLevel7?: number;
+  readonly populationLevel7?: number;
 
   /**
    * ResidentStart
    */
-  start?: number;
+  readonly start?: number;
 
   /**
    * ResidentMax
    */
-  max?: number;
+  readonly max?: number;
 }

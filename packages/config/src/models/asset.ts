@@ -23,28 +23,28 @@ import { Product } from './product';
  * ```
  */
 export interface Asset {
-  guid: number;
+  readonly guid: number;
 
   /**
    * `InfoDescription` of `Standard` property
    */
-  desc?: number;
+  readonly desc?: number;
 
   /**
    * `IconFilename` of `Standard` property
    */
-  icon?: string;
+  readonly icon?: string;
 
-  name?: string;
-  id?: string;
-  template?: string;
+  readonly name?: string;
+  readonly id?: string;
+  readonly template?: string;
 
-  building?: Building;
-  cost?: Cost;
-  upgradable?: Upgradable;
+  readonly building?: Building;
+  readonly cost?: Cost;
+  readonly upgradable?: Upgradable;
 
-  residence7?: Residence7;
-  populationLevel7?: PopulationLevel7;
+  readonly residence7?: Residence7;
+  readonly populationLevel7?: PopulationLevel7;
 
-  product?: Product;
+  readonly product?: Product;
 }

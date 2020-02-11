@@ -1,5 +1,5 @@
 export interface Cost {
-  costs?: Record<number, number>;
-  influenceCostType?: string;
-  influenceCostPoints?: number;
+  readonly costs?: Record<number, number>;
+  readonly influenceCostType?: string;
+  readonly influenceCostPoints?: number;
 }

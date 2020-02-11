@@ -2,34 +2,34 @@ export interface Product {
   /**
    * ProductCategory
    */
-  category?: number;
+  readonly category?: number;
 
   /**
    * AssociatedRegion
    */
-  regions?: string[];
+  readonly regions?: string[];
 
   /**
    * CivLevel
    */
-  civLevel?: number;
+  readonly civLevel?: number;
 
   /**
    * StorageLevel
    */
-  storageLevel?: string;
+  readonly storageLevel?: string;
 
   /**
    * ProductColor
    */
-  color?: string; // color
+  readonly color?: string; // color
 
-  basePrice?: number;
+  readonly basePrice?: number;
 
-  pathLayer?: string;
-  deltaOnly?: boolean;
-  isWorkforce?: boolean;
-  isStrategicResource?: boolean;
-  isAbstract?: boolean;
-  canBeNegative?: boolean;
+  readonly pathLayer?: string;
+  readonly deltaOnly?: boolean;
+  readonly isWorkforce?: boolean;
+  readonly isStrategicResource?: boolean;
+  readonly isAbstract?: boolean;
+  readonly canBeNegative?: boolean;
 }

@@ -2,10 +2,10 @@ export interface Upgradable {
   /**
    * NextGUID
    */
-  next?: number;
+  readonly next?: number;
 
   /**
    * <Upgradable>
    */
-  costs?: Record<number, number>;
+  readonly costs?: Record<number, number>;
 }

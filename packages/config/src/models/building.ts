@@ -2,25 +2,25 @@ export interface Building {
   /**
    * BuildingType
    */
-  type?: string;
+  readonly type?: string;
 
   /**
    * BuildingCategoryName
    */
-  category?: number;
+  readonly category?: number;
 
   /**
    * TerrainType
    */
-  terrain?: string;
+  readonly terrain?: string;
 
   /**
    * AssociatedRegions
    */
-  regions?: string[];
+  readonly regions?: string[];
 
   /**
    * PickingAsset
    */
-  pickingAsset?: number;
+  readonly pickingAsset?: number;
 }
