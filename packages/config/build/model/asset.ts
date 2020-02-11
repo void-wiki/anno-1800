@@ -1,4 +1,4 @@
-import { Asset } from '../../src';
+import { Template, Asset } from '../../src';
 import { VElement, pickValue } from '../v-element';
 import { TAG_NAMES } from '../constants';
 import { PropertyCreatorMap } from './_base';
@@ -33,7 +33,8 @@ export function createAsset(assetXml: VElement): Asset {
 
     name: pickValue(elemStandard, 'Name', 'string'),
     id: pickValue(elemStandard, 'ID', 'string'),
-    template: pickValue(assetXml, TAG_NAMES.Template, 'string'),
+
+    template: pickValue(assetXml, TAG_NAMES.Template, 'string', '_') as Template,
   };
 
   Object.entries(propertiesCreatorMap).forEach(([prop, creator]) => {

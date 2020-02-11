@@ -1,3 +1,5 @@
+import { Template } from './template';
+
 import { Building } from './building';
 import { Cost } from './const';
 import { Upgradable } from './upgradable';
@@ -23,6 +25,7 @@ import { Product } from './product';
  * ```
  */
 export interface Asset {
+  readonly template: Template;
   readonly guid: number;
 
   /**
@@ -35,9 +38,15 @@ export interface Asset {
    */
   readonly icon?: string;
 
+  /**
+   * Debug name (being removed for production)
+   */
   readonly name?: string;
+
+  /**
+   * Programming ID
+   */
   readonly id?: string;
-  readonly template?: string;
 
   readonly building?: Building;
   readonly cost?: Cost;

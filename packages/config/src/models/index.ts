@@ -1,3 +1,6 @@
+export * from './language';
+export * from './template';
+
 export * from './asset';
 
 export * from './building';
