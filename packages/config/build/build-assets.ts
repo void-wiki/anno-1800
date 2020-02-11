@@ -31,7 +31,8 @@ export async function buildAssets(): Promise<void> {
     TEMPLATES_EXPORTED.map(t => [t, []]),
   );
   assetsList.forEach(({ template, name, ...asset }) => {
-    assetsMap[template as string].push(asset);
+    // Remove the properties template and name for smaller size.
+    assetsMap[template as string].push(asset as Asset);
   });
 
   await fs.outputJSON(resolve(distDir, 'assets.json'), assetsMap);
