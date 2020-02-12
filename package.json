@@ -12,13 +12,13 @@
     "lerna:version": "lerna version --conventional-commits --create-release github --yes",
     "ts": "ts-node -r tsconfig-paths/register -P ./tsconfig.scripts.json"
   },
+  "dependencies": {
+    "@void-aurora/toolkit": "^0.8.3"
+  },
   "devDependencies": {
-    "@types/jest": "^25.1.1",
-    "@types/jsdom": "^12.2.4",
-    "@types/node": "^13.7.0",
-    "@void-aurora/toolkit": "^0.8.3",
+    "@types/jest": "^25.1.2",
+    "@types/node": "^13.7.1",
     "jest": "^25.1.0",
-    "jsdom": "^16.1.0",
     "lerna": "^3.20.2",
     "ts-jest": "^25.2.0",
     "ts-node": "^8.6.2",
